@@ -36,10 +36,10 @@ export default function Hero() {
           </Link>
 
           <Link
-            to="/contact"
+            to="/about"
             className="bg-(--color-bg)/40 border-2 border-(--color-accent) text-(--color-accent) hover:bg-(--color-accent) hover:text-(--color-bg) transition-all duration-300 px-10 py-4 rounded-xl font-bold backdrop-blur-md"
           >
-            Contact Us
+            About Us
           </Link>
         </div>
       </div>

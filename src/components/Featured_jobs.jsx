@@ -23,20 +23,26 @@ const responsive = {
     }
 };
 export default function Featured_jobs() {
-
     return (
-        <div
-            className="w-9/12 mx-auto flex flex-col justify-center items-center p-2.5"
-        >
-            <h2 className="text-4xl px-2 py-6 text-(--color-fg) ">Featured <span className="text-(--color-accent)">Jobs</span></h2>
+        <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto flex flex-col justify-center items-center py-10">
+            <h2 className="cursor-pointer text-4xl font-bold px-2 py-6 text-[--color-fg]">
+                Featured <span className="text-[--color-accent]">Jobs</span>
+            </h2>
 
-            <Carousel responsive={responsive} infinite={true} itemClass="mx-auto" className="grid space-y-2 w-full">
-                {
-                    jobs.map((job) => (
-                        <JobCard key={job.id} job={job} /> 
-                    ))
-                }
+            <Carousel 
+                responsive={responsive} 
+                infinite={true} 
+                autoPlay={true}
+                itemClass="px-3 py-4"
+                containerClass="w-full"
+            >
+                {jobs.map((job) => (
+                    <div key={job.id} className="flex justify-center">
+                        <JobCard job={job} />
+                    </div>
+                ))}
             </Carousel>
+            
             <Job_details_modal/>
         </div>
     )

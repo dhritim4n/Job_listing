@@ -23,7 +23,7 @@ export default function JobCard({ job }) {
   } = useContext(Job_context)
 
   return (
-    <div className="bg-(--color-bg)/80 backdrop-blur-xl border border-(--color-fg)/10 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 group flex flex-col h-full w-full md:w-68 text-(--color-fg)">
+    <div className="bg-(--color-bg)/80 backdrop-blur-xl border border-(--color-fg)/10 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 group flex flex-col h-full w-full  md:w-68 text-(--color-fg)">
 
       <div className="flex justify-between items-start mb-4">
         <div className="w-14 h-14 rounded-lg overflow-hidden border border-(--color-fg)/10 p-2 bg-white shrink-0">

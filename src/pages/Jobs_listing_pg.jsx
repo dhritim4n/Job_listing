@@ -21,7 +21,7 @@ export default function Jobs_listing_pg() {
                     <Job_search />
                 </div>
 
-                <div className="flex flex-col justify-between md:flex-row md:flex-wrap md:shrink gap-4">
+                <div className="flex flex-col justify-start md:flex-row md:flex-wrap md:shrink gap-4">
                     {jobs_list && jobs_list.length > 0 ? (
                         jobs_list.map((job) => (
                             <JobCard key={job.id || job.title} job={job} />

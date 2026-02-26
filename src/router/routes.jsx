@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home_pg from "../pages/Home_pg";
 import Layout from "../components/layout/Layout";
 import Jobs_listing_pg from "../pages/Jobs_listing_pg";
+import About_pg from "../pages/About_pg";
 
 const routes = createBrowserRouter(
     [
@@ -18,6 +19,10 @@ const routes = createBrowserRouter(
                     path : "jobs",
                     element : <Jobs_listing_pg/>
 
+                },
+                {
+                    path: "about",
+                    element: <About_pg/>
                 }
             ]
         }

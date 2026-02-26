@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import { Menu, X } from "lucide-react"
 
 const nav_items = [
@@ -15,12 +15,12 @@ export default function Header() {
         <header className="w-full sticky top-0 z-50 bg-(--color-bg) shadow-md">
             <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-                {/* Logo */}
-                <h1 className="text-2xl font-bold text-(--color-accent)">
+                <Link to="/">
+                <h1 className="text-2xl cursor-pointer font-bold text-(--color-accent)">
                     Job Portal
                 </h1>
+                </Link>
 
-                {/* Desktop Nav */}
                 <nav className="hidden md:flex gap-8">
                     {nav_items.map((item, index) => (
                         <NavLink
@@ -37,7 +37,6 @@ export default function Header() {
                     ))}
                 </nav>
 
-                {/* Mobile Menu Button */}
                 <button
                     className="md:hidden text-(--color-fg)"
                     onClick={() => setIsOpen(!isOpen)}
@@ -46,7 +45,6 @@ export default function Header() {
                 </button>
             </div>
 
-            {/* Mobile Nav */}
             <div
                 className={`md:hidden transition-all duration-300 overflow-hidden ${
                     isOpen ? "max-h-60" : "max-h-0"

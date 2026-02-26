@@ -4,6 +4,7 @@ import {
   X, MapPin, Briefcase, Users, 
   Clock, IndianRupee, GraduationCap, Building2 
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Job_details_modal() {
     const {
@@ -90,9 +91,13 @@ export default function Job_details_modal() {
                     </div>
 
                     <div className="flex gap-4">
+                        
                         <button className="flex-1 bg-(--color-accent) hover:bg-(--color-accent)/90 text-(--color-bg) py-4 rounded-2xl font-bold transition-all active:scale-95 shadow-lg shadow-(--color-accent)/30">
+                            <Link to ="/">
                             Apply for this Position
+                            </Link>
                         </button>
+                        
                         <button 
                             onClick={() => setJob_modal_open(false)}
                             className="px-6 py-4 rounded-2xl font-bold border-2 border-(--color-fg)/10 text-(--color-fg)/60 hover:bg-(--color-fg)/5 transition-all"
